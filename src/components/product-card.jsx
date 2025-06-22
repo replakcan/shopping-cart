@@ -52,7 +52,7 @@ function ProductCard({ product, setCart }) {
         {croppedDescription}
       </p>
       <div className="numeric-values">
-        <p>price: {price}</p>
+        <p>price: {price} ₺</p>
         <div className="rating-group">
           <p>rate: {rating.rate}</p>
           <p>count: {rating.count}</p>
