@@ -27,6 +27,23 @@ function ProductCard({ product, setCart }) {
     setCount(count - 1);
   }
 
+  function handleClick() {
+    setCart((prevCart) => {
+      const productId = product.id;
+      const existingItemIndex = prevCart.findIndex(
+        (item) => item.product.id == productId
+      );
+
+      if (existingItemIndex != -1) {
+        return prevCart.map((item, index) =>
+          index == existingItemIndex ? { ...item, count: count } : item
+        );
+      } else {
+        return [...prevCart, { product, count }];
+      }
+    });
+  }
+
   return (
     <div className="product-card">
       <h3>{title}</h3>
@@ -55,6 +72,7 @@ function ProductCard({ product, setCart }) {
           id="add-to-cart-btn"
           type="button"
           disabled={count <= 0}
+          onClick={handleClick}
         >
           Add To Cart
         </button>
