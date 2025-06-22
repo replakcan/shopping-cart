@@ -1,5 +1,4 @@
 import { useOutletContext } from "react-router-dom";
-import ProductCard from "../components/product-card";
 import CartItem from "../components/cart-item";
 
 function ShoppingCart() {
