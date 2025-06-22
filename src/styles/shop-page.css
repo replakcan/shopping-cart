@@ -6,55 +6,6 @@
   row-gap: 2rem;
 }
 
-.product-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid lightgray;
-  min-width: 300px;
-  width: 20%;
-  line-height: 1.2rem;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
-.product-card:hover {
-  cursor: pointer;
-}
-
-.product-card h3 {
-  text-align: center;
-}
-
-.product-card > img {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  margin: 1rem auto;
-  transition: scale 0.5s;
-}
-
-.product-card > img:hover {
-  scale: 1.1;
-}
-
-.product-description {
-  display: -webkit-box;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.rating-group {
-  display: flex;
-  justify-content: space-between;
-}
-
-.numeric-values {
-  margin-top: 1rem;
-}
-
 .categories {
   display: flex;
   justify-content: space-around;
