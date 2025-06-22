@@ -1,10 +1,30 @@
+import { useState } from "react";
+import "../styles/product-card.css";
+
 function ProductCard({ product }) {
   const { description, image, price, rating, title } = product;
+  const [count, setCount] = useState(0);
 
   let croppedDescription = description.split("");
 
   if (croppedDescription.length > 100) {
     croppedDescription = croppedDescription.slice(0, 99).join("") + "...";
+  }
+
+  function handleChange(e) {
+    setCount(Math.max(0, Math.min(10, Number(e.target.value))));
+  }
+
+  function handleIncrement() {
+    if (count == 10) return;
+
+    setCount(count + 1);
+  }
+
+  function handleDecrement() {
+    if (count == 0) return;
+
+    setCount(count - 1);
   }
 
   return (
@@ -20,6 +40,24 @@ function ProductCard({ product }) {
           <p>rate: {rating.rate}</p>
           <p>count: {rating.count}</p>
         </div>
+      </div>
+      <div className="add-to-cart-group">
+        <div className="count-group">
+          <button type="button" onClick={handleDecrement}>
+            -
+          </button>
+          <input type="number" min={0} value={count} onChange={handleChange} />
+          <button type="button" onClick={handleIncrement}>
+            +
+          </button>
+        </div>
+        <button
+          id="add-to-cart-btn"
+          type="button"
+          disabled={count <= 0}
+        >
+          Add To Cart
+        </button>
       </div>
     </div>
   );
