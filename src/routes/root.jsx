@@ -1,16 +1,16 @@
 import "../styles/root.css";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 function Root() {
   return (
-    <>
+    <section className="root-page">
       <nav>
         <NavLink to="home">Home</NavLink>
-        <NavLink to="shop">Shop</NavLink>
+        <NavLink to="products">Shop</NavLink>
         <NavLink to="shopping-cart">Shopping Cart</NavLink>
       </nav>
       <Outlet />
-    </>
+    </section>
   );
 }
 
