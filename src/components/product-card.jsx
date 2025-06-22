@@ -58,6 +58,7 @@ function ProductCard({ product, setCart }) {
           <p>count: {rating.count}</p>
         </div>
       </div>
+      <hr />
       <div className="add-to-cart-group">
         <div className="count-group">
           <button type="button" onClick={handleDecrement}>
