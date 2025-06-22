@@ -1,0 +1,27 @@
+.cart-item {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  border: 1px solid lightgray;
+  line-height: 1.2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  transition: all 0.5s;
+  box-sizing: border-box;
+}
+
+.cart-item img {
+  max-width: 100px;
+}
+
+.cart-item:hover {
+  border-color: red;
+  cursor: pointer;
+}
+
+.cart-item > :nth-child(2) {
+  margin-left: auto;
+}
