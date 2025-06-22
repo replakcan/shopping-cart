@@ -2,7 +2,7 @@ import "../styles/shop-page.css";
 
 import Categories from "../components/categories";
 import useProduct from "../hooks/useProduct";
-import { Outlet, useLoaderData } from "react-router-dom";
+import { Outlet, useLoaderData, useOutletContext } from "react-router-dom";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {
@@ -19,6 +19,7 @@ export async function loader() {
 function ShopPage() {
   const categories = useLoaderData();
   const { products, error, loading } = useProduct();
+  const { cart, setCart } = useOutletContext();
 
   if (error) return <div>Oops, something went wrong!</div>;
 
@@ -27,7 +28,7 @@ function ShopPage() {
   return (
     <section className="shop-page">
       <Categories categories={categories} />
-      <Outlet context={products} />
+      <Outlet context={{ products, cart, setCart }} />
     </section>
   );
 }

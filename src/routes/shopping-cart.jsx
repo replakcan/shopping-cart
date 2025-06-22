@@ -1,5 +1,6 @@
+import { useOutletContext } from "react-router-dom";
 function ShoppingCart() {
-  return <div>Shopping Cart</div>;
+  const { cart } = useOutletContext();
 }
 
 export default ShoppingCart;

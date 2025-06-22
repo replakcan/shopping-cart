@@ -1,7 +1,10 @@
+import { useState } from "react";
 import "../styles/root.css";
 import { NavLink, Outlet } from "react-router-dom";
 
 function Root() {
+  const [cart, setCart] = useState([]);
+
   return (
     <section className="root-page">
       <nav>
@@ -9,7 +12,7 @@ function Root() {
         <NavLink to="products">Shop</NavLink>
         <NavLink to="shopping-cart">Shopping Cart</NavLink>
       </nav>
-      <Outlet />
+      <Outlet context={{ cart, setCart }} />
     </section>
   );
 }

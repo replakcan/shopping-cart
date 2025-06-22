@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/product-card.css";
 
-function ProductCard({ product }) {
+function ProductCard({ product, setCart }) {
   const { description, image, price, rating, title } = product;
   const [count, setCount] = useState(0);
 
