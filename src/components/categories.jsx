@@ -1,3 +1,5 @@
+import '../styles/categories.css'
+
 import { useNavigate } from "react-router-dom";
 
 function Categories({ categories }) {

@@ -5,25 +5,3 @@
   justify-content: space-around;
   row-gap: 2rem;
 }
-
-.categories {
-  display: flex;
-  justify-content: space-around;
-}
-
-.categories > button {
-  background-color: transparent;
-  border: none;
-  transition: color 0.2s ease-in;
-}
-
-.categories > button:hover {
-  color: red;
-  cursor: pointer;
-}
-
-.shop-page > nav {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
