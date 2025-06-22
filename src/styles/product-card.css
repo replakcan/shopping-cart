@@ -1,0 +1,13 @@
+.count-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+#add-to-cart-btn {
+  width: 100%;
+}
+
+.count-group > input {
+  text-align: center;
+}
