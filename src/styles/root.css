@@ -1,10 +1,15 @@
+.root-page > :nth-child(2) {
+  padding: 2rem 10%;
+}
+
 nav {
   display: flex;
   gap: 1rem;
   border: 1px solid black;
   background-color: lightgoldenrodyellow;
+  padding: 0.5rem 1rem;
 }
 
 nav > * {
-    text-decoration: none;
+  text-decoration: none;
 }
