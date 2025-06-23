@@ -3,7 +3,7 @@ import ErrorPage from "./routes/error-page";
 import HomePage from "./routes/home-page.jsx";
 import Index from "./routes/index.jsx";
 import Root from "./routes/root";
-import ShopPage, { loader as categoryLoader } from "./routes/shop-page.jsx";
+import ShopPage, { loader as shopLoader } from "./routes/shop-page.jsx";
 import ShoppingCart from "./routes/shopping-cart";
 
 const routes = [
@@ -23,7 +23,7 @@ const routes = [
           {
             path: "products",
             element: <ShopPage />,
-            loader: categoryLoader,
+            loader: shopLoader,
             children: [
               {
                 index: true,
