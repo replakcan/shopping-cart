@@ -2,23 +2,3 @@
   display: flex;
   justify-content: space-around;
 }
-
-.categories > button {
-  color: white;
-  font-weight: bold;
-  background-color: transparent;
-  border: none;
-  transition: color 0.2s ease-in;
-}
-
-.categories > button:hover {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.shop-page > nav {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
