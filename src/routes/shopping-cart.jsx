@@ -12,7 +12,9 @@ function ShoppingCart() {
       {cart.length ? (
         cart.map((item) => <CartItem key={item.product.id} cartItem={item} />)
       ) : (
-        <div>cart is empty</div>
+        <p>
+          <i>cart is empty</i>
+        </p>
       )}
     </div>
   );
