@@ -1,3 +1,8 @@
+.root-page {
+  background-color: rgb(67, 67, 163);
+  min-height: 100vh;
+}
+
 .root-page > :nth-child(2) {
   padding: 2rem 10%;
 }
