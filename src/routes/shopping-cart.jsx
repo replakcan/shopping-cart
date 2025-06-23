@@ -1,12 +1,13 @@
+import "../styles/shopping-cart.css";
+
 import { useOutletContext } from "react-router-dom";
 import CartItem from "../components/cart-item";
 
 function ShoppingCart() {
   const { cart } = useOutletContext();
 
-  console.log(Object.values(cart));
   return (
-    <div>
+    <div className="shopping-cart">
       <h2>Items in your cart:</h2>
       <hr />
       {cart.length ? (
