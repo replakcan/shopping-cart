@@ -8,9 +8,10 @@ function useProduct() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let url = category
-      ? `https://fakestoreapi.com/products/category/${category}`
-      : "https://fakestoreapi.com/products";
+    let url =
+      category == "all" || !category
+        ? "https://fakestoreapi.com/products"
+        : `https://fakestoreapi.com/products/category/${category}`;
 
     fetch(url, {
       mode: "cors",
