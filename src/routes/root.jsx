@@ -8,9 +8,30 @@ function Root() {
   return (
     <section className="root-page">
       <nav>
-        <NavLink to="home">Home</NavLink>
-        <NavLink to="products">Shop</NavLink>
-        <NavLink to="shopping-cart">Shopping Cart</NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isActive ? "active" : isPending ? "pending" : ""
+          }
+          to="home"
+        >
+          Home
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isActive ? "active" : isPending ? "pending" : ""
+          }
+          to="products"
+        >
+          Shop
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isActive ? "active" : isPending ? "pending" : ""
+          }
+          to="shopping-cart"
+        >
+          Shopping Cart
+        </NavLink>
       </nav>
       <Outlet context={{ cart, setCart }} />
     </section>

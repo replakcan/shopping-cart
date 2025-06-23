@@ -5,10 +5,23 @@ import { NavLink } from "react-router-dom";
 function Categories({ categories }) {
   return (
     <nav className="categories">
-      <NavLink to="/products">all products</NavLink>
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isActive ? "active" : isPending ? "pending" : ""
+        }
+        to="/products/category/all"
+      >
+        all products
+      </NavLink>
       {categories.length ? (
         categories.map((category) => (
-          <NavLink key={category} to={`/products/category/${category}`}>
+          <NavLink
+            className={({ isActive, isPending }) =>
+              isActive ? "active" : isPending ? "pending" : ""
+            }
+            key={category}
+            to={`/products/category/${category}`}
+          >
             {category}
           </NavLink>
         ))

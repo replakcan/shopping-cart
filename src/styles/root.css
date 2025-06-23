@@ -19,10 +19,6 @@ nav {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-nav > * {
-  text-decoration: none;
-}
-
 .root-page > nav > :last-child {
   margin-left: auto;
 }
@@ -31,9 +27,18 @@ a {
   color: inherit;
   font-weight: bold;
   transition: color 0.2s ease-in;
+  text-decoration: none;
 }
 
 a:hover {
   color: blue;
-  text-decoration: underline;
+}
+
+a.active {
+  background: blue;
+  color: white;
+}
+
+a.pending {
+  color: blue;
 }
