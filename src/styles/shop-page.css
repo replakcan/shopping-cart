@@ -6,6 +6,12 @@
   row-gap: 2rem;
 }
 
+.shop-page > nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
 .loading-container,
 .error-container {
   color: white;
