@@ -21,9 +21,19 @@ function ShopPage() {
   const { products, error, loading } = useProduct();
   const { cart, setCart } = useOutletContext();
 
-  if (error) return <div>Oops, something went wrong!</div>;
+  if (error)
+    return (
+      <div className="error-container">
+        <i>Oops, something went wrong!</i>
+      </div>
+    );
 
-  if (loading) return <div>Loading...</div>;
+  if (loading)
+    return (
+      <div className="loading-container">
+        <i>Loading...</i>
+      </div>
+    );
 
   return (
     <section className="shop-page">
