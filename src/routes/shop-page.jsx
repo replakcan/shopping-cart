@@ -13,11 +13,12 @@ export async function loader() {
   if (response.status >= 400) throw new Error("Error occured");
 
   const categories = await response.json();
-  return categories;
+
+  return { categories };
 }
 
 function ShopPage() {
-  const categories = useLoaderData();
+  const { categories } = useLoaderData();
   const { products, error, loading } = useProduct();
   const { cart, setCart } = useOutletContext();
 
