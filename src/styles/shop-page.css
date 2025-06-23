@@ -1,7 +1,12 @@
 .products {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: space-around;
   row-gap: 2rem;
+}
+
+.loading-container,
+.error-container {
+  color: white;
 }
